@@ -1,0 +1,1 @@
+export const publicUrl = process.env.URL as string
