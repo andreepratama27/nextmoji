@@ -39,6 +39,7 @@ const Home = ({ data }: { data: Emoji[]}) => {
     })
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const filteredEmoji = React.useMemo(filterEmoji, [text])
 
   return (

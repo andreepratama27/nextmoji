@@ -19,4 +19,6 @@ const EmojiList = React.memo(({ emoji }: { emoji: EmojiType[]}) => {
   )
 })
 
+EmojiList.displayName = 'EmojiList'
+
 export default EmojiList

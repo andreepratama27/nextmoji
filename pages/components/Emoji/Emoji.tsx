@@ -3,10 +3,10 @@ import {
   GridItem,
   Text,
 } from '@chakra-ui/react'
-import { Emoji } from '../../types'
+import { Emoji as EmojiType } from '../../types'
 
-const Emoji = ({ item }: { item: Emoji }) => {
-  const [copied, setCopied] = React.useState(false)
+const Emoji = ({ item }: { item: EmojiType }) => {
+  const [, setCopied] = React.useState(false)
 
   const copyClipboard = (character: string) => {
     return () => {
@@ -24,5 +24,7 @@ const Emoji = ({ item }: { item: Emoji }) => {
     </GridItem>   
   )
 }
+
+Emoji.displayName = 'Emoji'
 
 export default Emoji
