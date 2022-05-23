@@ -10,15 +10,15 @@ const Emoji = ({ item }: { item: Emoji }) => {
 
   const copyClipboard = (character: string) => {
     return () => {
-      navigator.clipboard.writeText(character).then(success => {
+      navigator.clipboard.writeText(character).then(() => {
         setCopied(true)
       })
     }
   }
 
   return (
-    <GridItem w="100%" h="10" display="flex" bg="app.background" justifyContent="center" alignItems="center" _hover={{ backgroundColor: 'app.primary', cursor: 'pointer' }} onClick={copyClipboard(item.character)}>
-      <Text>
+    <GridItem w="100%" h="10" display="flex" bg="app.background" justifyContent="center" alignItems="center" _hover={{ backgroundColor: 'app.primary', cursor: 'pointer', borderRadius: 'md' }} onClick={copyClipboard(item.character)}>
+      <Text fontSize="xl">
         {item.character}
       </Text>
     </GridItem>   
