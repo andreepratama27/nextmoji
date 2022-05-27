@@ -5,7 +5,11 @@ import React from 'react'
 import { Emoji as EmojiType } from '../../types'
 import Emoji from '../Emoji'
 
-const EmojiList = React.memo(({ emoji }: { emoji: EmojiType[]}) => {
+interface IEmoji {
+  emoji: EmojiType[]
+}
+
+const EmojiList: React.FC<IEmoji> = React.memo(({ emoji }) => {
   return (
     <>
       <Grid templateColumns="repeat(8, 1fr)" gap={6}>

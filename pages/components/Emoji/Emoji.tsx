@@ -5,7 +5,11 @@ import {
 } from '@chakra-ui/react'
 import { Emoji as EmojiType } from '../../types'
 
-const Emoji = ({ item }: { item: EmojiType }) => {
+interface IEmoji {
+  item: EmojiType
+}
+
+const Emoji: React.FC<IEmoji> = ({ item }) => {
   const [, setCopied] = React.useState(false)
 
   const copyClipboard = (character: string) => {
